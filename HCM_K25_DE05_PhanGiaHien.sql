@@ -78,7 +78,6 @@ SELECT * FROM Matchs
 WHERE match_id = 'MS_007';
 
 SELECT P.player_nickname, P.player_roles
-FROM Players P
-JOIN Team T ON P.team_id = T.team_id
-WHERE T.KhuVuc = 'Vietnam';
+FROM Players P , Team T 
+WHERE P.team_id = T.team_id AND T.KhuVuc = 'Vietnam';
 
